@@ -1,22 +1,18 @@
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    	<div class="modal-dialog">
-			<div class="modal-content">
-                <!-- Begin # DIV Form -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Begin # DIV Form -->
 
 
-                    <!-- Begin # Login Form -->
-                    <form action ='/authorize/register' method='post' encType="multipart/form-data">
-		                <div class="modal-body">
-				    		<input id="login_username" class="form-control" name="userName" type="text" placeholder="Username" required>
-				    		<input id="login_password" class="form-control" name="password" type="password" placeholder="Password" required>
-				    	   <input  class="form-control storeIdInput" name="storeId" type="text" placeholder="xtoreid" required >
-                            <div>
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div>
-        		    	</div>
-				        <!--<div class="modal-footer">
+            <!-- Begin # Login Form -->
+            <form action='/authorize/register' method='post' encType="multipart/form-data">
+                <div class="modal-body">
+                    <input id="login_username" class="form-control" name="userName" type="text" placeholder="Username" required>
+                    <input id="login_password" class="form-control" name="password" type="password" placeholder="Password" required>
+                    <input class="form-control storeIdInput" name="storeId" type="text" placeholder="Store-Id" required>
+
+                </div>
+                <!--<div class="modal-footer">
                             <div>
 
                             </div>
@@ -24,12 +20,12 @@
                                 <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 				        </div>-->
-				        <button type="submit" class="btn btn-primary loginbutton">Login/Register</button>
-                    </form>
-                    <!-- End # Login Form -->
+                <button type="submit" class="btn btn-primary loginbutton" style="width: 100%;background: #1D62F0;color: white;">Login/Register</button>
+            </form>
+            <!-- End # Login Form -->
 
 
-               <!--  Begin | Register Form
+            <!--  Begin | Register Form
                     <form id="register-form" style="display:none;" action="" method="post">
             		    <div class="modal-body">
 		    				<div id="div-register-msg">
@@ -52,10 +48,10 @@
                     </form>
                      End | Register Form-->
 
-               <!-- </div>
+            <!-- </div>
                 <!-- End # DIV Form -->
 
-			</div>
-		</div>
-	</div>
-    <!-- END # MODAL LOGIN -->
+        </div>
+    </div>
+</div>
+<!-- END # MODAL LOGIN -->
