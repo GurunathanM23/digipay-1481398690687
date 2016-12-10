@@ -92,12 +92,12 @@ var Select_List_Data = {
                 value: ['','Headphones', 'Speakers']
         },
         
-        WearableTech: {
+        'Wearable Tech': {
                 text: ['select','Fitness', 'Apple Watch', 'Tracker'],
                 value: ['','Fitness', 'Apple Watch', 'Tracker']
         },
         
-        CellPhones: {
+        'Cell Phones': {
                 text: ['select','Smart Phones', 'Android Phones', 'Windows Phones'],
                 value: ['','Smart Phones', 'Android Phones', 'Windows Phones']
         }
