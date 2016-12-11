@@ -75,7 +75,7 @@ app.use('/transaction', transaction);
 app.use('/offers', offers);
 app.use('/newarrivals', newarrivals);
 app.use('/feedUpload', excelUpload);
-app.use('/uppdateProduct', updateProduct);
+app.use('/updateProduct', updateProduct);
 app.use('/analytics', analytics);
 app.use('/reviews', reviews);
 app.use('/stores', stores);

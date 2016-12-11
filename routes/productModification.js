@@ -6,6 +6,7 @@ router.post('/updateInventory',function(req,res,next){
 });
 
 router.post('/createNewProduct',function(req,res,next){
+
     new productModifcationService(req,res).createNewProduct(req.body);
     res.render('fileUpload');
 });

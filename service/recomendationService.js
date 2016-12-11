@@ -20,7 +20,6 @@ function recommendationService(requestBody,responseBody){
         var finalRecommendations=[];
          for(var userids=0;userids<data.length;userids++){
              var phoneNumber=data[userids].phoneNumber;
-             console.log('phoneNumber is' + phoneNumber);
             transactionModel.find({userId:phoneNumber,transactionDate:{$gt:date}}).exec(function(err,data){
             //console.log('1 is'+JSON.stringify(data));
 
@@ -44,7 +43,7 @@ function recommendationService(requestBody,responseBody){
               /*   console.log('3 is'+JSON.stringify(data));*/
                 if(data!=null && data.length>0){
                     for(var h=0;h<data.length;h++){
-                    InventoryModel.find({itemCategory:data[h].itemCategory,itemSubCategory:data[h].itemSubCategory,storeId:'1111'},
+                    InventoryModel.find({itemCategory:data[h].itemCategory,itemSubCategory:data[h].itemSubCategory},
                     function(err, data) {
                           /*console.log('6 is'+JSON.stringify(data));*/
                         for(var l=0;l<data.length;l++){
@@ -52,7 +51,6 @@ function recommendationService(requestBody,responseBody){
                             finalRecommendations.push(data[l]);
                         }
                     }).then(function(){
-                        console.log('item ids is'+itemIDs);
                          InventoryModel.find({itemId:{$in:itemIDs}},function(err, data) {
                          //console.log('4 is'+JSON.stringify(data));
                          for(var m=0;m<data.length;m++){
@@ -63,7 +61,6 @@ function recommendationService(requestBody,responseBody){
             /*console.log("7 is **********");
             responseBody.status(201);
             responseBody.send(finalRecommendations);*/
-            console.log('phoneNumber is ' +phoneNumber);
             /*console.log('finalRecommendations is ' +finalRecommendations);*/
             recommendationModel.findOne({userId:phoneNumber},function(err,recommendationdata){
                 if(recommendationdata!=null){

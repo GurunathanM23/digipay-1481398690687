@@ -7,9 +7,9 @@ router.get('/offers',function(req,res){
     res.render('offersAndPromotion');
 });
 router.post('/updateDiscount',function(req,res,next){
-     var session =req.session;
-     console.log('session is'+JSON.stringify(session));
-     console.log("session store id is " + session.storeId);
+     var session = req.session;
+     console.log("store id is "+ session.storeId);
+     console.log("store id is "+ req);
     new discountUpdateService(req.body,res).updateDiscountsbyCategoryAndSubCategory(session.storeId);
     res.render('offersAndPromotion');
 });

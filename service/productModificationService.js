@@ -13,10 +13,10 @@ function productModificationService(requestBody,responseBody){
             });
 
     }
-    this.createNewProduct = function(reqParams,storeId){
+    this.createNewProduct = function(reqParams){
         console.log('inside creation');
         console.log(JSON.stringify(reqParams));
-        InventoryModels.update({itemId: reqParams.itemId,storeId:storeId},
+        InventoryModels.update({itemId: reqParams.itemId,storeId:reqParams.storeId},
        { $set:{
                              itemName:reqParams.itemName,
                              itemCategory:reqParams.category,
