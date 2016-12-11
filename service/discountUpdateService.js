@@ -15,7 +15,7 @@ function discountUpdateService(requestBody, resp){
             query = {itemCategory:requestBody.category,itemSuubCategory:requestBody.subcategory,itemId:requestBody.itemId};
         }
         offerModel.update(query,
-        {$set:{discountType:'discounts',discountRate:requestBody.discountRate,storeId:storeId,userId:null}},
+        {$set:{discountType:'discounts',discountRate:requestBody.discountRate,storeId:requestBody.storeId,userId:null}},
         {upsert:true},function(err,data){
            if(err)throw err;
            /*if(data!=null){
@@ -27,7 +27,7 @@ function discountUpdateService(requestBody, resp){
         });
         }
         else if(requestBody.itemId!=null){
-            updateDiscountById(requestBody.itemId,storeId);
+            updateDiscountById(requestBody.itemId,requestBody.storeId);
         }
     }
     function updateDiscountById(itemId,storeId){
