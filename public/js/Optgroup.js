@@ -109,14 +109,14 @@ var Select_List_Data = {
 
 // populate associated select list when page loads
 window.onload = function() {
-    var form = document.forms['demoForm'];
+    var form = document.forms['offersform'];
     
     // reference to controlling select list
     var sel = form.elements['category'];
     sel.selectedIndex = 0;
     
     // name of associated select list
-    var relName = 'choices[]';
+    var relName = 'subcategory';
     // reference to associated select list
     var rel = form.elements[ relName ];
     
