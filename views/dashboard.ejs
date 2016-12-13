@@ -172,8 +172,7 @@
         $(".loginbutton").click(function() {
             sessionStorage.storeId = $(".storeIdInput").val();
         });
-
-        $.ajax({
+              $.ajax({
             url: "/analytics/getAnalytics",
             success: function(result) {
                 setArrayOfdata(result);
@@ -190,7 +189,9 @@
 
 
 
+
         function setArrayOfdata(data) {
+            if(data!=null){
             var categories = data.categories;
             var catatemp = [];
             for (var i = 0; i < categories.length; i++) {
@@ -371,6 +372,7 @@
                 };
                 arrayYearly.push(subcatfinalObjyearly);
             }
+            }
         }
 
         function createChart(id, catdata, finalArray) {
@@ -405,8 +407,8 @@
                     series: finalArray
                 }
             });
-        }
-
+        
+}
 
     });
 </script>
